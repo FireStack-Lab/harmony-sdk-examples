@@ -1,0 +1,15 @@
+node_modules
+yarn.lock
+yarn-*
+
+# tutorial
+tutorial/build/
+tutorial/contracts/**/*.json
+
+# backend
+Backend/build
+Backend/contracts/**/*.json
+# webapp statics folder
+web/statics/*/
+# truffle project
+truffle/build/

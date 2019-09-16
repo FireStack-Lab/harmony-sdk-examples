@@ -1,0 +1,35 @@
+{
+  "name": "harmony-sdk-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:tutorial": "rm -rf ./tutorial/build && ./node_modules/.bin/babel ./tutorial/src -d ./tutorial/build ",
+    "watch:tutorial": "./node_modules/.bin/babel ./tutorial/src --watch -d ./tutorial/build",
+    "build:wallet": "cd web/WebWallet && yarn install && yarn deploy",
+    "build:lottery": "cd web/Lottery && yarn install && yarn deploy",
+    "build:faucet": "cd web/Faucet && yarn install && yarn deploy",
+    "build:index": "cd web/Index && yarn install && yarn deployIndex",
+    "build:webapps": "yarn build:wallet && yarn build:lottery && yarn build:faucet && yarn build:index",
+    "run:server": "cd Backend && yarn install && yarn build:server && node build/index.js",
+    "run:ganache": "cd nodejs && node testGanache --debug true",
+    "start": "yarn build:webapps && yarn run:server"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-env": "^7.5.3",
+    "@babel/runtime": "^7.5.4",
+    "@harmony-js/core": "^0.1.21",
+    "colors": "^1.3.3",
+    "core-js": "3",
+    "yargs": "^13.2.4"
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.4.3",
+    "husky": "^3.0.1",
+    "solc": "^0.5.11",
+    "tslib": "^1.10.0"
+  }
+}

@@ -1,0 +1,35 @@
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: '100%';
+  width: '100%';
+  background: #3399ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 2rem;
+  margin: 0;
+}
+
+.button {
+  background: #333333;
+  color: #ffffff;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+.buttonDisabled {
+  background: #ffffff;
+  color: #cccccc;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0.8rem;
+}
